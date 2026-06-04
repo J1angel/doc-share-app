@@ -40,14 +40,3 @@ Include this repository (or a zip of `doc-share-app/`) with:
 - [x] Docker Compose
 - [x] Backend + frontend unit tests
 
-## Partial / incomplete
-
-- Live public deployment URL (you must deploy and update links)
-- Walkthrough video (record 3–5 min Loom/YouTube → `VIDEO_URL.txt`)
-- `.docx` import not implemented
-
-## Next 2–4 hours
-
-1. Deploy backend + frontend to Render/Vercel
-2. Record walkthrough video
-3. Add 2–3 screenshots to `docs/screenshots/`
