@@ -1,6 +1,6 @@
 # Submission checklist — CollabDocs
 
-## Google Drive folder contents
+## Github folder contents
 
 Include this repository (or a zip of `doc-share-app/`) with:
 
