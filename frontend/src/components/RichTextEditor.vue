@@ -33,7 +33,7 @@ watch(
   () => props.modelValue,
   (value) => {
     if (editor.getHTML() !== value) {
-      editor.commands.setContent(value, false)
+      editor.commands.setContent(value, { emitUpdate: false })
     }
   },
 )

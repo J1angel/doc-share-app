@@ -59,7 +59,7 @@ export const useAuthStore = defineStore('auth', () => {
     }
     if (axiosIsError(err) && err.response?.data?.errors) {
       const first = Object.values(err.response.data.errors)[0]
-      return Array.isArray(first) ? first[0] : 'Login failed'
+      return Array.isArray(first) ? (first[0] ?? 'Login failed') : 'Login failed'
     }
     return 'Unable to sign in. Please try again.'
   }
