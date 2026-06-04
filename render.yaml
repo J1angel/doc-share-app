@@ -1,0 +1,25 @@
+# Optional Render blueprint — deploy backend and static frontend separately.
+services:
+  - type: web
+    name: collabdocs-api
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://YOUR-FRONTEND.onrender.com
+
+  - type: web
+    name: collabdocs-web
+    runtime: static
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://collabdocs-api.onrender.com/api
